@@ -18,6 +18,7 @@ ul li:hover {
 
 
 nav {
+    z-index: 1;
     
     position:sticky;
     top:5%;
@@ -174,7 +175,99 @@ nav ul {
   
 }
 
-.parent-2 i {
-    margin-top: 90px;
-    background-color: white;
+.parent-2 {
+    margin-top: 100px;
+    /* background-image: linear-gradient(#bf2cbf,#bf2c56); */
+    background-image: linear-gradient(white,white);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* flex-direction: row-reverse; */
+}
+.parent-2::before {
+    content: "";
+    position: absolute;
+    border:5px solid #7f32e3;
+    /* top: 5%; */
+    margin: 15px;
+    left: 45%;
+    height: 90%;
+    border-radius: 20px;
+    /* margin-left: -25%; */
+
+    
+}
+.parent-2 .two p {
+    text-align:center;
+    color:  #7f32e3;
+    font-size: 20px;
+    padding: 20px;
+
+
+}
+
+.parent-2 .one i {
+   
+    color:  #7f32e3;
+    font-size: 300px;
+    margin-left: 10px;
+    transition: 1s
+
+}
+
+.parent-2 .two i {
+
+   
+}
+
+.two>div {
+    margin-left: 300px;
+}
+
+.two i {
+    margin: 10px;
+    transition: .5s;
+}
+
+.two i:hover{
+    transform: translateY(-5px);
+
+}
+
+
+
+.parent-2 .two h1  {
+    color:  #7f32e3;
+    cursor:pointer;
+    animation-name: up-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.two h3 {
+    text-align: center;
+    color: #7f32e3;
+    text-transform: capitalize;
+}
+
+
+
+
+@keyframes up-down {
+    to {
+        transform: translateY(-10px);
+    }
+    
+}
+.parent-2 .one i:hover {
+    cursor: pointer;
+    transform:  translateX(300px) rotate(-360deg);
+    color: #ff0049;
+}
+
+hr {
+    margin-top: 50px;
 }
